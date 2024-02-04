@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="x-icon" href="ticlogo.png">
+  <title>E X O </title>
+  
+  <link rel="stylesheet" href="Human.css">
+</head>
+
+<body>
+    <audio id="background-music" src="game3.mp3"loop autoplay></audio>
+    <audio id="humanTurnSound" src="game.wav"></audio>
+
+    <form action="categories.html">
+        <button type="submit">Back </button>
+      </form>
+<div></div>
+<div class="scoreboard" style="justify-self: center;">
+      
+          
+    <h1> First to get 5 Points win</h1>
+        <h3>
+      <div class="scoreboard">
+        <div class="score">O Score: <span id="player1Score">0</span></div>
+        <div class="score">X Score: <span id="player2Score">0</span></div> 
+
+      </div>
+      <h/3>
+      <button onclick="startGame()" id="butbut" style="
+    background: #2c3372cf;
+    animation: glow 2s infinite;
+    border-radius: 10px;
+    color: #ffffff;
+    width: 221px;
+    height: 90px;
+    border-image: linear-gradient(to right, #EBC1EE, #605399);
+    font-weight: 900;
+    margin-left: 110px;
+    font-size: x-large;
+    margin-top: 50px;
+">Start Game</button>
+      
+  </div>
+  <div style="margin-top: 69px;text-align: center;width: 547px;height: 630;padding: 50px;/* border: 2px solid; */border-image: linear-gradient(to right, #EBC1EE, #605399);border-image-slice: 1;border-radius: 10px;transition: background-color 0.3s ease-in-out;animation: glow 2s infinite;">
+      
+    <table>
+<tbody><tr>
+<td class="cell" id="0"></td>
+<td class="cell" id="1"></td>
+<td class="cell" id="2"></td>
+<td class="cell" id="3"></td>
+<td class="cell" id="4"></td>
+<td class="cell" id="5"></td>
+</tr>
+<tr>
+<td class="cell" id="6"></td>
+<td class="cell" id="7"></td>
+<td class="cell" id="8"></td>
+<td class="cell" id="9"></td>
+<td class="cell" id="10"></td>
+<td class="cell" id="11"></td>
+</tr>
+<tr>
+<td class="cell" id="12"></td>
+<td class="cell" id="13"></td>
+<td class="cell" id="14"></td>
+<td class="cell" id="15"></td>
+<td class="cell" id="16"></td>
+<td class="cell" id="17"></td>
+</tr>
+<tr>
+<td class="cell" id="18"></td>
+<td class="cell" id="19"></td>
+<td class="cell" id="20"></td>
+<td class="cell" id="21"></td>
+<td class="cell" id="22"></td>
+<td class="cell" id="23"></td>
+</tr>
+<tr>
+<td class="cell" id="24"></td>
+<td class="cell" id="25"></td>
+<td class="cell" id="26"></td>
+<td class="cell" id="27"></td>
+<td class="cell" id="28"></td>
+<td class="cell" id="29"></td>
+</tr>
+</tbody></table>
+
+    </div>
+  
+  
+  <div class="endgame" style="display: none;">
+                <div class="text"></div>
+            </div>
+            
+            <script src="Human.js"></script>
+
+
+</body>
+</html>

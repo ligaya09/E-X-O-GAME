@@ -1,0 +1,63 @@
+body {
+    grid-template:
+        ".. ..";
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    background: url('tictac.png') center/cover;
+    transition: background-color 0.3s ease-in-out;
+    align-items: center;
+}
+
+.container {
+  text-align: center;
+  width: 555px;
+  height: 702px;
+  padding: 10px;
+  /* border: 2px solid; */
+  border-image: linear-gradient(to right, #EBC1EE, #605399);
+  border-image-slice: 1;
+  border-radius: 9px;
+  transition: background-color 0.3s ease-in-out;
+  animation: glow 2s infinite;
+  margin-left: 2px;
+  margin-bottom: 1000px;
+}
+
+h1 {
+
+  color: white;
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: -47px;
+  margin-top: -45px 
+}
+button {
+            color: white;
+            font-size: x-large;
+            margin-top: 150px;
+            margin-bottom: 20px;
+            font-weight: 1000;
+            background: border-box;
+            animation: glow 2s infinite;
+            border-radius: 2px;
+            width: 150px;
+            height: 50px;
+            border-image: linear-gradient(to right, #EBC1EE, #605399);
+}
+
+img {
+  height: 50%;
+}
+
+@keyframes glow {
+    0% {
+      box-shadow: 0 0 5px #3498db, 0 0 20px #3498db; /* Initial shadow values */
+    }
+    50% {
+      box-shadow: 0 0 20px #DB00B6, 0 0 30px #3498db; /* Intermediate shadow values */
+    }
+    100% {
+      box-shadow: 0 0 5px #DB00B6, 0 0 20px DB00B6; /* Final shadow values */
+    }
+  }

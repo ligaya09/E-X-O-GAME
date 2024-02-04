@@ -1,0 +1,106 @@
+<html><head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="x-icon" href="ticlogo.png">
+    <title>E X O </title>
+    <link rel="stylesheet" href="AI.css">
+  </head>
+  <body>
+    <audio id="humanTurnSound" src="game.wav"></audio>
+    <audio id="aiTurnSound" src="game.wav"></audio>
+    <audio id="background-music" src="game3.mp3"loop autoplay></audio>
+
+      <div style="justify-self: center;">
+      
+          <form action="categories.html">
+            <button type="submit" style="width: 200;height: 50px;font-size: x-large;">Back</button>
+
+            </form>
+        <h4> First to get 5 Points win</h1>
+            <h3>
+          <div class="scoreboard">
+            <div class="score">Human Score: <span id="playerScore">0</span></div>
+            <div class="score" style="margin-top: -18px;margin-bottom: 100px;">AI Score: <span id="aiScore">0</span></div>
+            
+          </div>
+          </h3>
+          <div>
+              <h4>
+              <label for="difficulty">Select Categories:</label>
+          </h4>
+              <select id="difficulty" onchange="if(this.value !== 'Choose one') { startGame(); toggleButton(); } resetScores()">
+                <option>Choose one</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Difficult</option>
+                <option value="hard">Hard</option>
+              </select>
+          </div>
+      </div>
+      <div style="
+    text-align: center;
+    width: 600px;
+    height: 600;
+    padding: 50px;
+    /* border: 2px solid; */
+    border-image: linear-gradient(to right, #EBC1EE, #605399);
+    border-image-slice: 1;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+    animation: glow 2s infinite;
+">
+      
+          <table>
+              <tbody><tr>
+                <td class="cell" id="0"></td>
+                <td class="cell" id="1"></td>
+                <td class="cell" id="2"></td>
+                <td class="cell" id="3"></td>
+                <td class="cell" id="4"></td>
+                <td class="cell" id="5"></td>
+              </tr>
+              <tr>
+                <td class="cell" id="6"></td>
+                <td class="cell" id="7"></td>
+                <td class="cell" id="8"></td>
+                <td class="cell" id="9"></td>
+                <td class="cell" id="10"></td>
+                <td class="cell" id="11"></td>
+              </tr>
+              <tr>
+                <td class="cell" id="12"></td>
+                <td class="cell" id="13"></td>
+                <td class="cell" id="14"></td>
+                <td class="cell" id="15"></td>
+                <td class="cell" id="16"></td>
+                <td class="cell" id="17"></td>
+              </tr>
+              <tr>
+                <td class="cell" id="18"></td>
+                <td class="cell" id="19"></td>
+                <td class="cell" id="20"></td>
+                <td class="cell" id="21"></td>
+                <td class="cell" id="22"></td>
+                <td class="cell" id="23"></td>
+              </tr>
+              <tr>
+                <td class="cell" id="24"></td>
+                <td class="cell" id="25"></td>
+                <td class="cell" id="26"></td>
+                <td class="cell" id="27"></td>
+                <td class="cell" id="28"></td>
+                <td class="cell" id="29"></td>
+              </tr>
+            </tbody></table>
+            <div class="endgame">
+                <div class="text"></div>
+            </div>
+            <button onclick="startGame()" id="butbut" style="visibility: hidden; height: 60px;width: 120px;background-color: transparent; color: white; margin-top: 40px; font-weight: bold; margin-left: 1px;">Clear Board</button>
+            
+             
+            
+          </div>
+    <script src="AI.js"></script>
+  
+  
+  
+  </body>
+  </html>
