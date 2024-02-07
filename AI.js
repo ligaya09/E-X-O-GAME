@@ -219,36 +219,37 @@ function bestSpotMedium() {
   return emptySpots[randomIndex];
 }
 
- function checkTie() {
-  if (emptySquares().length == 0 && !gameIsOver) {
-    gameIsOver = true;
-    for (var i = 0; i < cells.length; i++) {
-      cells[i].style.backgroundColor = "green";
-      cells[i].removeEventListener('click', turnClick, false);
+   function checkTie() {
+      if (emptySquares().length == 0 && !gameIsOver) {
+        gameIsOver = true;
+        for (var i = 0; i < cells.length; i++) {
+          cells[i].style.backgroundColor = "green";
+          cells[i].removeEventListener('click', turnClick, false);
+        }
+    
+        // Check if the tie score limit is reached
+        if (tieScore === 4) {
+          declareWinner("Tie Game! - Limit Reached");
+          resetScores(); // Reset all scores
+        } else {
+          declareWinner("Tie Game!");
+          tieScore++; // Increment tie score
+          updateScores(); // Update the scoreboard
+        }
+    
+        return true;
+      }
+      return false;
     }
-
-    // Check if the tie score limit is reached
-    if (tieScore === 4) {
-      declareWinner("Tie Game! - Limit Reached");
-      resetScores(); // Reset all scores
-    } else {
-      declareWinner("Tie Game!");
-      tieScore++; // Increment tie score
-      updateScores(); // Update the scoreboard
+    
+    function resetScores() {
+      // Reset player1Score, player2Score, and tieScore to 0
+      player1Score = 0;
+      player2Score = 0;
+      tieScore = 0;
+    
+      // Call the function to update the displayed scores
+      updateScores();
     }
-
-    return true;
-  }
-  return false;
-}
-
-function resetScores() {
-  // Reset player1Score, player2Score, and tieScore to 0
-  player1Score = 0;
-  player2Score = 0;
-  tieScore = 0;
-
-  // Call the function to update the displayed scores
-  updateScores();
-}
+    
 
